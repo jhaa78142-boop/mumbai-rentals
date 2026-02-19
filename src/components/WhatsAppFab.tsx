@@ -1,7 +1,11 @@
 import React, { useMemo } from "react";
 
 export default function WhatsAppFab({ phone10 }: { phone10?: string }) {
+<<<<<<< HEAD
   const businessNumber = "919999999999"; // TODO: replace with your number (91 + 10 digits)
+=======
+  const businessNumber = "917498369191"; // your number (91 + 10 digits)
+>>>>>>> aecf813064853b7cecc2de82b03b31aed1fd97db
   const waNumber = useMemo(() => {
     const cleaned = (phone10 ?? "").replace(/\D+/g, "");
     if (cleaned.length === 10) return "91" + cleaned;

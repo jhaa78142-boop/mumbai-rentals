@@ -77,22 +77,38 @@ export default function Footer() {
               <div className="text-sm font-semibold text-white">Quick Links</div>
               <ul className="mt-4 space-y-2 text-sm text-white/70">
                 <li>
+<<<<<<< HEAD
                   <a className="transition hover:text-white" href="#top">
+=======
+                  <a className="transition hover:text-white" href="/">
+>>>>>>> aecf813064853b7cecc2de82b03b31aed1fd97db
                     Home
                   </a>
                 </li>
                 <li>
+<<<<<<< HEAD
                   <a className="transition hover:text-white" href="#how">
+=======
+                  <a className="transition hover:text-white" href="/#how">
+>>>>>>> aecf813064853b7cecc2de82b03b31aed1fd97db
                     How It Works
                   </a>
                 </li>
                 <li>
+<<<<<<< HEAD
                   <a className="transition hover:text-white" href="#lead">
+=======
+                  <a className="transition hover:text-white" href="/#lead">
+>>>>>>> aecf813064853b7cecc2de82b03b31aed1fd97db
                     Find a Home
                   </a>
                 </li>
                 <li>
+<<<<<<< HEAD
                   <a className="transition hover:text-white" href="#faq">
+=======
+                  <a className="transition hover:text-white" href="/#faq">
+>>>>>>> aecf813064853b7cecc2de82b03b31aed1fd97db
                     FAQ
                   </a>
                 </li>

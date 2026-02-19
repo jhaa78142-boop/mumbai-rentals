@@ -1,5 +1,9 @@
 import React from "react";
 import Reveal from "./Reveal";
+<<<<<<< HEAD
+=======
+import AreaGallery from "./AreaGallery";
+>>>>>>> aecf813064853b7cecc2de82b03b31aed1fd97db
 
 type Area = {
   title: string;
@@ -68,6 +72,10 @@ export default function AreaShowcase() {
             </Reveal>
           ))}
         </div>
+<<<<<<< HEAD
+=======
+              <AreaGallery />
+>>>>>>> aecf813064853b7cecc2de82b03b31aed1fd97db
       </div>
     </section>
   );

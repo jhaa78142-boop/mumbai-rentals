@@ -93,3 +93,92 @@ html {
 /* Hide scrollbar (mobile nav chips) */
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+<<<<<<< HEAD
+=======
+
+/* ---- Pro polish: background noise + blobs + shimmer + check ---- */
+.bg-noise {
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)' opacity='.22'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  mix-blend-mode: overlay;
+}
+
+@keyframes blobFloat {
+  0% { transform: translate3d(0,0,0) scale(1); }
+  33% { transform: translate3d(18px,-24px,0) scale(1.03); }
+  66% { transform: translate3d(-22px,18px,0) scale(0.98); }
+  100% { transform: translate3d(0,0,0) scale(1); }
+}
+
+.blob {
+  animation: blobFloat 10s ease-in-out infinite;
+  will-change: transform;
+}
+.blob-delay { animation-delay: -2.5s; }
+.blob-delay2 { animation-delay: -5s; }
+
+@keyframes shimmerMove {
+  0% { transform: translateX(-40%); opacity: 0.0; }
+  10% { opacity: 0.35; }
+  50% { opacity: 0.55; }
+  90% { opacity: 0.30; }
+  100% { transform: translateX(40%); opacity: 0.0; }
+}
+.shimmer {
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.14), transparent);
+  animation: shimmerMove 1.5s ease-in-out infinite;
+}
+
+@keyframes checkDraw {
+  from { stroke-dashoffset: 60; opacity: 0.1; }
+  to { stroke-dashoffset: 0; opacity: 1; }
+}
+.check-path {
+  stroke: #34d399; /* emerald-400-ish */
+  stroke-dasharray: 60;
+  stroke-dashoffset: 60;
+  animation: checkDraw 700ms cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blob, .shimmer, .check-path { animation: none !important; }
+  .check-path { stroke-dashoffset: 0; opacity: 1; }
+}
+
+
+/* Accessibility: consistent focus rings */
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.35);
+  border-radius: 12px;
+}
+
+/* Micro-interactions */
+.hover-lift {
+  transition: transform 220ms cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 220ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  will-change: transform;
+}
+.hover-lift:hover {
+  transform: translateY(-2px);
+}
+.hover-lift:active {
+  transform: translateY(0);
+}
+
+.card-premium {
+  background: rgba(255,255,255,0.82);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 16px 50px rgba(0,0,0,0.12);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hover-lift {
+    transition: none !important;
+    transform: none !important;
+  }
+}
+>>>>>>> aecf813064853b7cecc2de82b03b31aed1fd97db
